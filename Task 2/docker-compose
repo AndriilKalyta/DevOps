@@ -1,0 +1,10 @@
+version: "2.0"
+services:
+  app:
+    build: .
+    volumes:
+      - /home/vagrant/python.py:/home/vagrant/python.py
+  db:
+    build: .
+    volumes:
+      - /home/vagrant/python.py:/home/vagrant/python.py
