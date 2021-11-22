@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellodude
+spec:
+  selector:
+    matchLabels:
+      app: hellodude
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: hellodude
+    spec:
+      containers:
+      - name: hellodude
+        image: yrmes/hellodude
+        ports:
+        - containerPort: 5000
